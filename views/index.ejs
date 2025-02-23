@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sytles/main.css" />
+    <title>Coctails</title>
+  </head>
+  <body>
+    <h1><%=data.strDrink%></h1>
+    <h2>Category: <%=data.strCategory%></h2>
+    <h2>Alcoholic: <%=data.strAlcoholic%></h2>
+    <h2>Glass: <%=data.strGlass%></h2>
+    <% data.ingredients.forEach(element => {%>
+    <h2><%=element.measure%> <%=element.name%></h2>
+    <% }) %>
+    <h2>Instructions: <%=data.strInstructions%></h2>
+    <img src="<%=data.strDrinkThumb%>" alt="<%=data.strDrink%>" />
+  </body>
+</html>
